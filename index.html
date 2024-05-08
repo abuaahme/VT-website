@@ -5,36 +5,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Homepage</title>
     <style>
-        /* Center the content vertically */
+        /* Reset default margin and padding */
         body, html {
-            height: 100%;
             margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Default font */
+            color: #333; /* Default text color */
+            background-color: #f3f4f6; /* Light grey background color */
+        }
+
+        /* Center the content vertically */
+        body {
             display: flex;
             justify-content: center;
             align-items: center;
+            min-height: 100vh; /* Full viewport height */
         }
         
-        /* Style for the under construction message */
-        .under-construction {
+        /* Container for content */
+        .container {
             text-align: center;
-            padding: 20px;
-            border: 2px solid #ccc;
-            border-radius: 5px;
-            background-color: lightblue;
+            padding: 40px; /* Reduced padding */
+            border-radius: 30px; /* Rounded corners */
+            background-color: #ffffff; /* White background */
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2); /* More pronounced shadow effect */
+            max-width: 800px; /* Increased maximum width */
+            font-size: 20px; /* Larger font size */
+            color: #333; /* Text color */
         }
-	      /* Background color */
-        body {
-            background-color: lightblue;
+
+        /* Header styles */
+        h1 {
+            font-size: 42px; /* Larger font size */
+            color: #1a5276; /* Darker blue header text color */
+            margin-top: 0; /* Remove default margin */
+        }
+
+        /* Contact link styles */
+        .contact-link {
+            color: #2980b9; /* Blue link color */
+            text-decoration: none; /* Remove default underline */
+            font-size: 22px; /* Smaller font size */
+            font-weight: bold; /* Bold font */
+            transition: color 0.3s; /* Smooth color transition on hover */
+        }
+
+        .contact-link:hover {
+            color: #1d5a85; /* Darker blue on hover */
+        }
+
+        /* Waiting list message styles */
+        .waiting-list {
+            margin-top: 30px; /* Add space below contact link */
+        }
+
+        /* Button styles */
+        .button {
+            display: inline-block;
+            padding: 20px 40px; /* Increased padding for larger button */
+            background-color: #4CAF50; /* Green button color */
+            color: #fff; /* Button text color */
+            text-decoration: none; /* Remove default underline */
+            border-radius: 25px; /* Rounded button corners */
+            border: none; /* Remove button border */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            transition: background-color 0.3s; /* Smooth background color transition on hover */
+            font-size: 24px; /* Larger font size */
+        }
+
+        .button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+
+        /* Additional styling for the waiting list input */
+        .waiting-list-input {
+            border: 2px solid #2980b9; /* Blue border */
+            border-radius: 25px; /* Rounded corners */
+            padding: 25px 30px; /* Increased padding */
+            margin-top: 20px; /* Top margin */
+            width: calc(100% - 60px); /* Full width minus padding */
+            box-sizing: border-box; /* Include padding in width calculation */
+            font-size: 24px; /* Larger font size */
+            transition: border-color 0.3s; /* Smooth border color transition on focus */
+        }
+
+        .waiting-list-input:focus {
+            outline: none; /* Remove outline on focus */
+            border-color: #1a5276; /* Darker blue border on focus */
+        }
+
+        /* Confirmation message styles */
+        #confirmationMessage {
+            display: none; /* Initially hidden */
+            color: #27ae60; /* Green color for success message */
+            margin-top: 20px; /* Top margin */
+            font-size: 24px; /* Larger font size */
         }
     </style>
 </head>
 <body>
-    <div class="under-construction">
+    <div class="container">
         <h1>Welcome to OpenVT</h1>
-        <h2>Under Construction</h2>
-        <p>Our website is currently under construction. We'll inform you as soon as it goes 	live.</p>
-	<p>For further information, please contact: kylestir@iu.edu</p>
-	<p>Please send us an email to join the waiting list and receive notifications</p>
+        <p>Our website is currently under construction. We'll inform you as soon as it goes live.</p>
+        <p>For further information, please contact <a href="mailto:kylestir@iu.edu" class="contact-link">kylestir@iu.edu</a></p>
+        <p>To join the waiting list and receive notifications, please send us an email.</p>
     </div>
 </body>
 </html>
